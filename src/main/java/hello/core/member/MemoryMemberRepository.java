@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class MemoryMemberRepository implements MemberRepository {
 
-    private static Map<Long, Member> store = new HashMap<>();
+    private static Map<Long, Member> store = new HashMap<>(); // 사실 동시성 이슈가 있어서 ContcurrentHashMap을 써야한다.
 
     @Override
     public void save(Member member) {

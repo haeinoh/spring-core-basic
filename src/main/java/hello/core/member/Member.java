@@ -1,6 +1,6 @@
 package hello.core.member;
 
-public class Member {
+public class Member { // 회원 entity
 
     private Long id;
     private String name;

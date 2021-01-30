@@ -1,8 +1,9 @@
 package hello.core.member;
 
+
 public class MemberServiceImpl implements MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository(); //null pointer exception으로 터질 수가 있어서 구현체를 넣어준다.
+    private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     @Override
     public void join(Member member) {
