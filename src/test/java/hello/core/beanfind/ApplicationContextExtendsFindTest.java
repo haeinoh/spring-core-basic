@@ -41,7 +41,7 @@ public class ApplicationContextExtendsFindTest {
 
     @Test
     @DisplayName("부모 타입으로 모두 조회하기")
-    void findAllBeanByParentType() {
+    void findAllBeanByParentType() { // DiscountPolicy 하위 모두 조회 가능
         Map<String, DiscountPolicy> beansOfType = ac.getBeansOfType(DiscountPolicy.class);
         assertThat(beansOfType.size()).isEqualTo(2);
 
@@ -51,8 +51,8 @@ public class ApplicationContextExtendsFindTest {
     }
 
     @Test
-    @DisplayName("부모 타입으로 모두 조회하기")
-    void findAllBeanByObjectType() { // Object -> spring bean에 등록된 모든 것들이 출력됨
+    @DisplayName("부모 타입으로 모두 조회하기 - Object")
+    void findAllBeanByObjectType() { // Object :: spring bean에 등록된 모든 것들이 출력됨
         Map<String, Object> beansOfType = ac.getBeansOfType(Object.class);
 
         for (String key : beansOfType.keySet()) { // 실제로는 출력문 남기면 안됨

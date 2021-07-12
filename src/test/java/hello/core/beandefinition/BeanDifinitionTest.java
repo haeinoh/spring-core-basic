@@ -17,7 +17,7 @@ public class BeanDifinitionTest {
     void findApplicationBean() {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
-            BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
+            BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName); // ApplicationContext는 getBeanDefinition이 없다..
 
             if(beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
                 System.out.println("beanDefinitionName = " + beanDefinitionName +
