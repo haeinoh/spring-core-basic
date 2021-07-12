@@ -1,6 +1,6 @@
 HELP.md
 .gradle
-.manifest
+goorm.manifest
 gradlew
 gradlew.bat
 /gradle/wrapper/
