@@ -41,7 +41,7 @@ public class ApplicationContextBasicFindTest {
     @Test // No bean named 'XXXX' available
     @DisplayName("빈 이름으로 조회X")
     void findBeanByNameX() {
-        ac.getBean("XXXX", MemberService.class);
+//        ac.getBean("XXXX", MemberService.class);
         assertThrows(NoSuchBeanDefinitionException.class,
                 () ->  ac.getBean("XXXX", MemberService.class)); // 이거 로직을 실행하면 예외가 나와야한다.
     }
